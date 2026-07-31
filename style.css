@@ -13,3 +13,133 @@ header{
     height: 300px;
 }
 
+/* ===================================================
+   CONFIGURAÇÕES GLOBAIS E CORES
+   =================================================== */
+:root {
+    --bg-color: #fdf8f9;
+    --text-color: #4a3e3d;
+    --header-bg: #fff0f3;
+    --accent-color: #e65c83;
+    --accent-hover: #c43d63;
+    --card-bg: #ffffff;
+    --border-color: #f3c6d3;
+    --shadow-color: rgba(230, 92, 131, 0.15);
+}
+
+/* Modo Escuro (Ativado via JS adicionando a classe .dark-mode no body) */
+body.dark-mode {
+    --bg-color: #1a1618;
+    --text-color: #f3e8eb;
+    --header-bg: #2d1f24;
+    --accent-color: #ff7597;
+    --accent-hover: #ff99b2;
+    --card-bg: #251b1e;
+    --border-color: #4a2e37;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* ===================================================
+   CABEÇALHO (HEADER)
+   =================================================== */
+header {
+    background-color: var(--header-bg);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* Botão do Modo Escuro */
+#botao {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 8px var(--shadow-color);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#botao:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* ===================================================
+   CONTEÚDO PRINCIPAL (MAIN)
+   =================================================== */
+main {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+main p {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    margin-bottom: 35px;
+    font-size: 1.05rem;
+}
+
+/* Imagem de Destaque */
+main div img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+/* ===================================================
+   RESPONSIVIDADE (TELEMÓVEIS)
+   =================================================== */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    #botao {
+        width: 100%;
+    }
+}
