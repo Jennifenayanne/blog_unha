@@ -12,19 +12,9 @@
 
         <img src="unha.jpg" alt="">
         <h1>Unhas da Jeni</h1>
-        <button id="botao" onclick="modoEscuro()"
-            style= margin-left:10 px;
-                border-radius:20 px;
-                padding:5px;">Modo Escuro</button>
-                function modoEscuro() {
-    document.body.classList.toggle('dark-mode');
-    
-    const botao = document.getElementById('botao');
-    if (document.body.classList.contains('dark-mode')) {
-        botao.textContent = 'Modo Claro';
-    } else {
-        botao.textContent = 'Modo Escuro';
-    }
+        <button id="theme-toggle">Alternar Tema</button>
+
+        </button>
 }
     </header>
     <p>Tudo o que voce precisa saber para manter suas unhas bonitas e saudaveis
@@ -49,6 +39,13 @@ Cuidar das unhas vai muito além da estética: é um momento de autocuidado que 
             
         </div>
     </main>
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        
+        toggleBtn.addEventListener('click',()=>{
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
     
 </body>
 </html>

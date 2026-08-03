@@ -143,3 +143,8 @@ main div img {
         width: 100%;
     }
 }
+
+.body.dark-mode{
+    background-color: #121212;
+    color: #ffffff;
+}
